@@ -3,9 +3,7 @@ package com.progr1mmer.oauth2.server.endpoint;
 import com.progr1mmer.security.common.ExtendConstant;
 import com.progr1mmer.security.userdetails.ExtendUser;
 import com.progr1mmer.utils.SmsVerificationCodeUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -19,7 +17,7 @@ import java.util.Map;
 @RestController
 public class ExtendSmsLoginEndpoint {
 
-    @GetMapping("/login/sms")
+    @RequestMapping(value = "/login/sms", method = RequestMethod.GET)
     public Map<String, Object> sms(@RequestParam String phone, HttpServletRequest request) {
         String code = SmsVerificationCodeUtils.sendSms(phone);
         request.getSession().setAttribute(ExtendConstant.SMS_ATTRIBUTE_NAME, ExtendUser.PASSWORD_ENCODER.encode(ExtendConstant.SMS_PASSWORD_PREFIX + code));
