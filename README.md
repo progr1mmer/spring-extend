@@ -47,6 +47,6 @@ spring-extend是个人在spring相关框架使用过程中的一些总结，在�
   * 基于spring-cloud-starter-oauth2单点登录的扩展
   * 其他同[spring-extend-security](https://github.com/Progr1mmer/spring-extend#spring-extend-security)
 * **完整示例**
-  * 参考: [spring-extend-test-oauth2-server](https://github.com/Progr1mmer/spring-extend/tree/master/spring-extend-test-oauth2-server), [spring-extend-test-oauth2-client1](https://github.com/Progr1mmer/spring-extend/tree/master/spring-extend-test-oauth2-client1), [spring-extend-test-oauth2-client2](https://github.com/Progr1mmer/spring-extend/tree/master/spring-extend-test-oauth2-client2)
+  * 参考[spring-extend-test-oauth2-server](https://github.com/Progr1mmer/spring-extend/tree/master/spring-extend-test-oauth2-server), [spring-extend-test-oauth2-client1](https://github.com/Progr1mmer/spring-extend/tree/master/spring-extend-test-oauth2-client1), [spring-extend-test-oauth2-client2](https://github.com/Progr1mmer/spring-extend/tree/master/spring-extend-test-oauth2-client2)
   
 ## 持续更新（欢迎提出对其他组件扩展的需求）...
