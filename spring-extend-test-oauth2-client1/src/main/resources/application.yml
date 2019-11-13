@@ -1,0 +1,13 @@
+server:
+  port: 8082
+  context-path: /
+
+security:
+  oauth2:
+    client:
+      client-id: client1
+      client-secret: client1_secret
+      user-authorization-uri: http://localhost:8081/oauth/authorize
+      access-token-uri: http://localhost:8081/oauth/token
+    resource:
+      user-info-uri: http://localhost:8081/oauth/user
