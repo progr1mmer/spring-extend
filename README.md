@@ -1,5 +1,5 @@
 # Spring-extend
-spring-extend是个人在spring相关框架使用过程中的一些总结，在尽量简洁的代码下提供一些使用频率较高的组件的扩展，使用过程中有任何疑问或问题，欢迎随时指出。
+spring-extend算是个人在spring相关框架使用过程中的一些总结，用尽量简洁的代码提供较为实用的扩展，有任何疑问或问题，欢迎随时指出。
 
 ## spring-extend-common
 * **说明**
