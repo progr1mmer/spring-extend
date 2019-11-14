@@ -25,6 +25,7 @@ import org.springframework.security.web.savedrequest.*;
 
 import javax.annotation.Resource;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @author Suxy
@@ -85,8 +86,11 @@ public class WebSecurityConfigurerAdaptor extends WebSecurityConfigurerAdapter {
             boolean credentialsNonExpired = (boolean)details.get("credentialsNonExpired");
             boolean accountNonLocked = (boolean)details.get("accountNonLocked");
             Collection<Map<String, String>> maps = (Collection<Map<String, String>>) details.get("authorities");
-            List<GrantedAuthority> authorities = new ArrayList<>();
-            maps.forEach(map -> map.values().forEach(val -> authorities.add(new SimpleGrantedAuthority(val))));
+            List<GrantedAuthority> authorities = maps.stream().flatMap(map -> {
+                List<GrantedAuthority> tmp = new ArrayList<>();
+                map.values().forEach(val -> tmp.add(new SimpleGrantedAuthority(val)));
+                return tmp.stream();
+            }).collect(Collectors.toList());
             String id = (String) details.get("id");
             boolean root = (boolean)details.get("root");
             Map<String, String> resources = (Map<String, String>) details.get("resources");
